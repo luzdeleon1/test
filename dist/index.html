@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chiclet Pattern</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- JavaScript-->
+  <script type="text/javascript" src="main.js"></script>
+  <!-- CSS-->
+  <link rel="stylesheet" href="main.css">
+  <link href="assets/images/favicon-16x16.png" rel="icon" type="image/x-icon">
+</head>
+<body class="kp-theme-ds2">
+  <main class="grid-container">
+    <h1>Chiclet Demo</h1>
+    <h2>Category (-variation-2)</h2>
+<div class="chiclet-container spacing-2u">
+  <div class="chiclet-row">
+  <div class="chiclet-shell -variation-2">
+    <span class="screenreader-only" aria-hidden="true" id="text-1"> remove category filter: </span>
+    <span aria-hidden="true">in</span>
+    <span class="chiclet-label" title="Locations" aria-hidden="true" id="text-2">Locations</span>
+    <button class="chiclet-clear-button" aria-labelledby="text-1 text-2" type="button">
+      <img alt="" src="assets/images/close-small.svg" aria-hidden="true">
+    </button>
+  </div>
+
+  <div class="chiclet-shell -variation-2">
+    <span class="screenreader-only" aria-hidden="true" id="text-3"> remove category filter: </span>
+    <span aria-hidden="true">in</span>
+    <span class="chiclet-label" title="Health Topics" aria-hidden="true" id="text-4">Health Topics</span>
+    <button class="chiclet-clear-button" aria-labelledby="text-3 text-4" type="button">
+      <img alt="" src="assets/images/close-small.svg" aria-hidden="true">
+    </button>
+  </div>
+</div>
+</div>
+<h2>Results (-variation-1)</h2>
+<div class="chiclet-container spacing-2u">
+  <div class="chiclet-row">
+    <div class="chiclet-shell -variation-1">
+      <span class="screenreader-only" aria-hidden="true" id="text-5"> remove filter: </span>
+      <span class="chiclet-label" title="Anesthesiology" aria-hidden="true" id="text-6" aria-hidden="true">Anesthesiology</span>
+      <button class="chiclet-clear-button" aria-labelledby="text-5 text-6" type="button">
+        <img alt="" src="assets/images/close-small.svg" aria-hidden="true">
+      </button>
+    </div>
+    <div class="chiclet-shell -variation-1">
+      <span class="screenreader-only" aria-hidden="true" id="text-7"> remove filter: </span>
+      <span class="chiclet-label" title="Applied Behavioral Analysis / Behavioral Health Treatment (ABA/BHT)" aria-hidden="true" id="text-8" aria-hidden="true">Applied Behavioral Analysis / Behavioral Health Treatment (ABA/BHT)</span>
+      <button class="chiclet-clear-button" aria-labelledby="text-7 text-8" type="button">
+        <img alt="" src="assets/images/close-small.svg" aria-hidden="true">
+      </button>
+    </div>
+
+    <div class="chiclet-shell -variation-1">
+      <span class="screenreader-only" aria-hidden="true" id="text-9"> remove  filter: </span>
+      <span class="chiclet-label" title="Pediatrics" id="text-10" aria-hidden="true">Pediatrics</span>
+      <button class="chiclet-clear-button" aria-labelledby="text-9 text-10" type="button">
+        <img alt="" src="assets/images/close-small.svg" aria-hidden="true">
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<h2>Focus Demo</h2>
+<div class="-book">
+  The demo below displays expected behavior for Accessibility: The cursor focus should return to the results text if a chiclet is removed.  See the <a class="external-link" href="https://confluence-aes.kp.org/display/DSDOC/Chiclet#Chiclet-Accessibility" target="_blank" title="Opens in a new window, external" data-analytics-type="link" data-analytics-click="External:Link Text">
+    Chiclets page <img width="20" height="20" src="assets/images/openinnewwindowexternal_blue.svg" alt="">
+  </a> in Confluence for more details.
+</div>
+
+<div class="chiclet-container spacing-2u">
+  <div class="chiclet-row">
+    <fieldset aria-labelledby="chiclet-legend"> 
+      <div class="chiclet-legend" id="chiclet-legend" tabindex="-1">
+        <span id="countValue">2 </span> results for <strong>doctors</strong>
+      </div> 
+      <br>   
+      <div class="chiclet-shell -variation-2">
+        <span class="screenreader-only" aria-hidden="true" id="text-11"> remove category filter: </span>
+        <span aria-hidden="true">in</span>
+        <span class="chiclet-label" title="Doctors" aria-hidden="true" id="text-12">Doctors</span>
+        <button class="chiclet-clear-button chiclet-legend-clear" aria-labelledby="text-11 text-12" type="button">
+          <img alt="" src="assets/images/close-small.svg" aria-hidden="true">
+        </button>
+      </div>
+      
+      <div class="chiclet-shell -variation-1">
+        <span class="screenreader-only" aria-hidden="true" id="text-13"> remove  filter: </span>
+        <span class="chiclet-label" id="text-14" aria-hidden="true">Pediatrics</span>
+        <button class="chiclet-clear-button chiclet-legend-clear" aria-labelledby="text-13 text-14" type="button">
+          <img alt="" src="assets/images/close-small.svg" aria-hidden="true">
+        </button>
+      </div>
+    </fieldset>
+  </div>
+</div>
+
+    <div style="text-align:center">Chiclet Version <span class="pl-chiclet-pattern-version"></span></div>
+  </main>
+</body>
+</html>
