@@ -1,0 +1,10 @@
+{
+  "title": "Popular destinations",
+  "links": {
+    "find a primary care physician": "https://www.kp.org",
+    "refill a prescription": "https://www.kp.org",
+    "flu shot locations": "https://www.kp.org",
+    "pharmacy": "https://www.kp.org",
+    "urgent care": "https://www.kp.org"
+  }
+}

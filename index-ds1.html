@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Autocomplete Search Pattern</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- JavaScript-->
+  <script type="text/javascript" src="main.js"></script>
+  <!-- CSS-->
+  <link rel="stylesheet" href="https://fed.kp.org/styleguide-archive/4.0/main.css">
+  <link rel="stylesheet" href="main-ds1.css">
+  <style>
+    .demo-box {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body class="sg-spacing">
+  <main>
+    <article>
+      <section>
+        <h1 class="styling-2">Autocomplete Search</h1>
+
+        <div class="demo-box">
+          <button id="toggleButton" class="button">Toggle border</button>
+        </div>
+        <br><br>
+        <p class="styling-4">Contextual Search</p>
+        <p>This example fetches JSON to populate the "Popular search links" and Search Suggestions.</p>
+        <br>
+
+        <div class="container">
+          <!-- autocomplete search patern - contextual -->
+          <div
+            class="autocomplete-search"
+            data-recommended-links="true"
+            data-recommended-links-url="recommended-links.json"
+            data-recommended-links-announcement="displaying recommended links"
+            data-recommended-links-tracking="Recommended Links"
+            data-search-suggestions="true"
+            data-search-suggestions-url="search-suggestions.json"
+            data-search-suggestions-announcement="displaying search suggestions"
+            data-search-suggestions-tracking="Suggested Queries"
+            data-reset-announcement="no recommendations or suggestions"
+            data-input-width=""
+            data-analytics-location="Autocomplete Search">
+            <form class="autocomplete-search__form" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" method="get" onsubmit="return false" action="">
+              <label class="autocomplete-search__label">Enter a main symptom, condition, or type of appointment.</label>
+              <div class="autocomplete-search__combobox clear-input-field">
+                <input class="autocomplete-search__input clear-input-textbox contextual-input" type="text" placeholder="Example: allergies, heart health, sleep disorders." role="combobox" aria-expanded="false">
+                <fieldset class="autocomplete-search__listbox -hidden"></fieldset>
+                <button class="clear-input-button" aria-label="clear this search field" type="button"><img class="" src="assets/images/clear_x.svg" alt=""></button>
+              </div>
+              <button class="autocomplete-search__submit button" type="submit">Search</button>
+            </form>
+            <div class="autocomplete-search__manual" aria-hidden="true"></div>
+            <div class="autocomplete-search__manual-search" aria-hidden="true"></div>
+          </div>
+          <!-- /autocomplete search pattern - contextual -->
+        </div>
+
+        <br><br><br>
+        <p class="styling-4">Global Search</p>
+        <p>This example fetches JSON to populate the "Popular search links" and Search Suggestions.</p>
+        <br>
+
+        <!-- autocomplete search pattern - global -->
+        <div 
+          class="autocomplete-search -global"
+          data-recommended-links="true"
+          data-recommended-links-url="recommended-links.json"
+          data-recommended-links-announcement="displaying recommended links"
+          data-recommended-links-tracking="Recommended Links"
+          data-search-suggestions="true"
+          data-search-suggestions-url="search-suggestions.json"
+          data-search-suggestions-announcement="displaying search suggestions"
+          data-search-suggestions-tracking="Suggested Queries"
+          data-reset-announcement="no recommendations or suggestions"
+          data-input-width=""
+          data-analytics-location="Autocomplete Search">
+          <button class="autocomplete-search__close" aria-label="close this search" type="button">
+            <img alt="" src="assets/images/close.svg">
+          </button>
+          <form class="autocomplete-search__form" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" method="get" onsubmit="return false" action="">
+            <label class="autocomplete-search__label screenreader-only">Search</label>
+            <div class="autocomplete-search__combobox clear-input-field">
+              <div class="container">
+                <i class="icon-search" aria-hidden="true"></i>
+                <input class="autocomplete-search__input clear-input-textbox" type="text" role="combobox" aria-expanded="false">
+              </div>
+              <div class="container container--global">
+                <fieldset class="autocomplete-search__listbox -hidden"></fieldset>
+                <button class="clear-input-button" aria-label="clear this search field" type="button"><img class="-clear-icon" src="assets/images/clear_x.svg" alt=""></button>
+              </div>
+            </div>  
+            <button class="autocomplete-search__submit button" type="submit">
+              <img class="search-icon" src="assets/images/search.svg" alt="">Search</button>
+          </form>
+          <div class="autocomplete-search__manual" aria-hidden="true"></div>
+          <div class="autocomplete-search__manual-search" aria-hidden="true"></div> 
+        </div>
+        <!-- /autocomplete search pattern - global -->
+
+        <br clear="all">
+        <br><br><br>
+        <p class="styling-4">Manual data using static HTML</p>
+        <p>This example uses static HTML to populate both the "Popular search links" and Search Suggestions. It also uses the optional data-attribute setting to hide icons next to search suggestions.</p>
+        <br>
+
+        <!-- autocomplete search patern - global -->
+        <div
+          class="autocomplete-search -global"
+          data-recommended-links="true"
+          data-recommended-links-url=""
+          data-recommended-links-announcement="displaying recommended links"
+          data-recommended-links-tracking="Recommended Links"
+          data-search-suggestions="true"
+          data-search-suggestions-url=""
+          data-search-suggestions-announcement="displaying search suggestions"
+          data-search-suggestions-tracking="Suggested Queries"
+          data-reset-announcement="no recommendations or suggestions"
+          data-search-result-icon="false"
+          data-min-characters="1"
+          data-max-results="50"
+          data-analytics-location="Autocomplete Search">
+          <button class="autocomplete-search__close" aria-label="close this search" type="button">
+            <img alt="" src="assets/images/close.svg">
+          </button>
+          <form class="autocomplete-search__form" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" method="get" onsubmit="return false" action="">
+            <label class="autocomplete-search__label screenreader-only">Search</label>
+            <div class="autocomplete-search__combobox clear-input-field">
+              <div class="container">
+                <i class="icon-search" aria-hidden="true"></i>
+                <input class="autocomplete-search__input clear-input-textbox" role="combobox" aria-expanded="false" type="text">
+              </div>
+              <div class="container container--global">
+                <fieldset class="autocomplete-search__listbox -hidden"></fieldset>
+                <button class="clear-input-button" aria-label="clear this search field" type="button"><img class="-clear-icon" src="assets/images/clear_x.svg" alt=""></button>
+              </div>
+            </div>
+            <button class="autocomplete-search__submit button" type="submit" data-analytics-type="button" data-analytics-click="Search"><i class="icon-search" aria-hidden="true"></i>Search</button>
+          </form>
+          <div class="autocomplete-search__manual" aria-hidden="true">
+            <legend class="autocomplete-search__heading">Popular short links</legend>
+            <ul class="autocomplete-search__list">
+              <li>
+                <a href="https://www.kp.org">find a primary care physician</a>
+              </li>
+              <li>
+                <a href="https://www.kp.org">refill a prescription</a>
+              </li>
+              <li>
+                <a href="https://www.kp.org">flu shot locations</a>
+              </li>
+              <li>
+                <a href="https://www.kp.org">pharmacy</a>
+              </li>
+              <li>
+                <a href="https://www.kp.org">urgent care</a>
+              </li>
+            </ul>
+          </div>
+          <div class="autocomplete-search__manual-search" aria-hidden="true">
+            <legend class="autocomplete-search__heading">Search Suggestions</legend>
+            <ul class="autocomplete-search__list">
+              <li>Acne</li>
+              <li>ADD-ADHD</li>
+              <li>Adult Vaccines</li>
+              <li>Allergies</li>
+              <li>Alzheimers</li>
+              <li>Anorexia Nervosa</li>
+              <li>Anxiety Panic</li>
+              <li>Arthritis</li>
+              <li>Asthma</li>
+              <li>Atrial Fibrillation</li>
+              <li>Autism</li>
+              <li>Baby Center</li>
+              <li>Back Pain</li>
+              <li>Binge Eating Disorder</li>
+              <li>Bipolar Disorder</li>
+              <li>Birth Control</li>
+              <li>Bladder Cancer</li>
+              <li>Blood and Lymph system</li>
+              <li>Brain and Nervous System</li>
+              <li>Brain Cancer</li>
+              <li>Breast Cancer</li>
+              <li>Bulimia Nervosa</li>
+              <li>Cancer</li>
+              <li>Carpal Tunnel Syndrome</li>
+              <li>Cataracts</li>
+              <li>Cats</li>
+              <li>Celiac Disease</li>
+              <li>Cervical Cancer</li>
+              <li>Cholesterol Management</li>
+              <li>Chronic Fatigue Syndrome</li>
+              <li>Cold and Flu</li>
+              <li>Colorectal Cancer</li>
+              <li>COPD</li>
+              <li>Crohns Disease</li>
+              <li>Depression</li>
+              <li>Diabetes</li>
+              <li>Digestive Disorders</li>
+              <li>Dogs</li>
+              <li>Drugs and Medications</li>
+              <li>DVT</li>
+              <li>Ear Infection</li>
+              <li>Eating Disorders</li>
+              <li>Eczema</li>
+              <li>Endometriosis</li>
+              <li>Epilepsy</li>
+              <li>Erectile Dysfunction</li>
+              <li>Eye Health</li>
+              <li>Fibromyalgia</li>
+              <li>First Aid</li>
+              <li>Food Poisoning</li>
+              <li>Genital Herpes</li>
+              <li>Hair Loss</li>
+              <li>Health & Baby</li>
+              <li>Health & Balance</li>
+              <li>Health & Cooking</li>
+              <li>Health & Diet</li>
+              <li>Health & Fitness</li>
+              <li>Health & Parenting</li>
+              <li>Health & Sex</li>
+              <li>Health Insurance and Medicare</li>
+              <li>Healthy Beauty</li>
+              <li>Healthy Seniors</li>
+              <li>Heart Disease</li>
+              <li>Heart Failure</li>
+              <li>Heart Health</li>
+              <li>Heartburn/GERD</li>
+              <li>Hepatitis</li>
+              <li>HIV</li>
+              <li>AIDS</li>
+              <li>HPV/Genital Warts</li>
+              <li>Hypertension</li>
+              <li>Infertility and Reproduction</li>
+              <li>Inflammatory Bowel Disease</li>
+              <li>Crohns Disease</li>
+              <li>Irritable Bowel Syndrome</li>
+              <li>Kidney Stones Knee Pain</li>
+              <li>Lung</li>
+              <li>Lung Cancer</li>
+              <li>Lupus</li>
+              <li>Macular Degeneration</li>
+              <li>Melanoma Skin Cancer</li>
+              <li>Men's Health</li>
+              <li>Menopause</li>
+              <li>Mental Health</li>
+              <li>Metabolic Syndrome</li>
+              <li>Migraines Headaches</li>
+              <li>Multiple Myeloma</li>
+              <li>Multiple Sclerosis</li>
+              <li>Non-Hodgkin's Lymphoma</li>
+              <li>Oral Health</li>
+              <li>Osteoarthritis</li>
+              <li>Osteoporosis</li>
+              <li>Ovarian Cancer</li>
+              <li>Pain Management</li>
+              <li>Palliative Care</li>
+              <li>Pancreatic Cancer</li>
+              <li>Parkinson's</li>
+              <li>Pets</li>
+              <li>PMS</li>
+              <li>Postpartum Depression</li>
+              <li>Prostate Cancer</li>
+              <li>Prostate Enlargement BPH</li>
+              <li>Psoriasis</li>
+              <li>Psoriatic Arthritis</li>
+              <li>Raising Fit Kids</li>
+              <li>Restless Legs Syndrome Center</li>
+              <li>RFK Food</li>
+              <li>RFK Mood</li>
+              <li>RFK Move</li>
+              <li>RFK Recharge</li>
+              <li>RFK Weight</li>
+              <li>Rheumatoid Arthritis</li>
+              <li>Schizophrenia</li>
+              <li>Sexual Conditions</li>
+              <li>Sexual Health</li>
+              <li>Shingles</li>
+              <li>Skin Problems and Treatments</li>
+              <li>Sleep Apnea</li>
+              <li>Sleep Disorders</li>
+              <li>Smoking Cessation</li>
+              <li>Stress Management</li>
+              <li>Stroke</li>
+              <li>Substance Abuse and Addiction</li>
+              <li>Surgery</li>
+              <li>Teen Boys</li>
+              <li>Teen Girls</li>
+              <li>Teen Health</li>
+              <li>Ulcerative Colitis</li>
+              <li>Urinary Incontinence OAB</li>
+              <li>Uterine Fibroids</li>
+              <li>Vaccines</li>
+              <li>Vitamins and Supplements</li>
+              <li>Weight Loss & Obesity</li>
+              <li>Women's Health</li>
+              <li>Young Adult Health</li>
+            </ul>
+          </div>
+        </div>
+        <!-- /autocomplete search patern - global -->
+
+        <br clear="all">
+        <br><br><br>
+        <p class="styling-4">Disabled recommended links and search suggestions</p>
+        <br>
+
+        <!-- autocomplete search patern - global -->
+        <div
+          class="autocomplete-search -global"
+          data-recommended-links="false"
+          data-recommended-links-url="recommended-links.json"
+          data-recommended-links-announcement="displaying recommended links"
+          data-recommended-links-tracking="Recommended Links"
+          data-search-suggestions="false"
+          data-search-suggestions-url="search-suggestions.json"
+          data-search-suggestions-announcement="displaying search suggestions"
+          data-search-suggestions-tracking="Suggested Queries"
+          data-reset-announcement="no recommendations or suggestions"
+          data-input-width=""
+          data-analytics-location="Autocomplete Search">
+          <button class="autocomplete-search__close" aria-label="close this search" type="button">
+            <img alt="" src="assets/images/close.svg">
+          </button>
+          <form class="autocomplete-search__form" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" method="get" onsubmit="return false" action="">
+            <label class="autocomplete-search__label screenreader-only">Search</label>
+            <div class="autocomplete-search__combobox clear-input-field">
+              <div class="container">
+                <i class="icon-search" aria-hidden="true"></i>
+                <input class="autocomplete-search__input clear-input-textbox" type="text">
+              </div>
+              <div class="container container--global">
+                <fieldset class="autocomplete-search__listbox -hidden"></fieldset>
+                <button class="clear-input-button" aria-label="clear this search field" type="button"><img class="-clear-icon" src="assets/images/clear_x.svg" alt=""></button>
+              </div>
+            </div>
+            <button class="autocomplete-search__submit button" type="submit"><i class="icon-search" aria-hidden="true"></i>Search</button>
+          </form>
+          <div class="autocomplete-search__manual" aria-hidden="true"></div>
+          <div class="autocomplete-search__manual-search" aria-hidden="true"></div> 
+        </div>
+        <!-- /autocomplete search patern - global -->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </section>
+    </article>
+  </main>
+</body>
+<script>
+  // for demo only
+  var searchListbox = document.querySelector('.autocomplete-search__listbox');
+  var trigger = document.getElementById('toggleButton'); // or whatever triggers the toggle
+
+  trigger.addEventListener('click', function (e) {
+    e.preventDefault();
+    searchListbox.classList.toggle('-toggle-border'); // or whatever your active class is
+  });
+</script>
+
+</html>
